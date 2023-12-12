@@ -6,6 +6,7 @@
 #include <bits/stdc++.h>
 #include <cmath>
 #include <chrono>
+#include <sys/stat.h>
 using namespace std;
 using namespace std::chrono;
 
@@ -13,6 +14,7 @@ int main(int argc, char * argv[]){
     time_point<system_clock>start,end;
     start = system_clock::now();
     char prefix[] = {'a','b','c','d','e','f','g','i','l','m','n','o','p','q','r','s','t','u','v','w','x','y'};
+    mkdir("normalized", 0777);
     omp_set_num_threads(22);
     #pragma omp parallel for
     for(int i = 0; i < sizeof(prefix); i++){ // i = arquivo
