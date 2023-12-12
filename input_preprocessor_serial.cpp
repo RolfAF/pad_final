@@ -6,6 +6,7 @@
 #include <bits/stdc++.h>
 #include <cmath>
 #include <chrono>
+#include <sys/stat.h>
 using namespace std;
 using namespace std::chrono;
 
@@ -16,6 +17,7 @@ int main(int argc, char * argv[]){
     string points[1000][20][3]; // 1000 linhas x 20 pontos x 3 coordenadas
     char prefix[] = {'a','b','c','d','e','f','g','i','l','m','n','o','p','q','r','s','t','u','v','w','x','y'};
     string new_line = "";
+    mkdir("normalized", 0777);
     for(int i = 0; i < sizeof(prefix); i++){ // i = arquivo
         gesture = i;
         ifstream input_file;
